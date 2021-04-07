@@ -1,0 +1,123 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.751), rgba(0, 0, 0, 0.751)), url('/assets/images/Background.png.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .nav-logo {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 30px;
+}
+
+.navbar .nav-links ul li {
+    list-style: none;
+    margin: 0px 40px;
+    position: relative;
+}
+
+.navbar .nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navbar .nav-links ul li::after {
+    content: "";
+    left: 0px;
+    width: 0%;
+    height: 3px;
+    background: #009688;
+    position: absolute;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar .nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.container {
+    color: #fff;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    letter-spacing: 0.7rem;
+}
+
+.container p {
+    line-height: 30px;
+    margin: 20px 0px;
+}
+
+button {
+    width: 200px;
+    background: transparent;
+    color: #fff;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    border: 2px solid #009688;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    width: 0%;
+    height: 100%;
+    background: #009688;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    border-radius: 25px;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
